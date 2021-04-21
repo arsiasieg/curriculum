@@ -52,13 +52,13 @@ header {
     position: absolute;
     top: 10%;
     left: 15%;
-    animation: appear 1700ms; }
+    /*animation: appear 1700ms;*/ }
   header .dialogue {
     height: 35%;
     margin: 16rem auto auto auto;
     border-radius: 1rem;
     position: relative;
-    animation: description_appear 1700ms; }
+    /*animation : description_appear 1700ms;*/ }
     header .dialogue .name_contact {
       display: flex;
       justify-content: space-between; }
@@ -97,7 +97,6 @@ header {
       border: thick double #922b21;
       border-radius: 1rem;
       background-color: #af726c;
-      position: relative;
       z-index: -1; }
 
 /*CORPS--------------------------------------------------*/
