@@ -45,20 +45,20 @@ header {
   header .imageProfil {
     width: 50rem;
     height: 50%;
-    background-image: url("https://www.zupimages.net/up/21/16/03on.png");
+    background-image: url("../img/profilFull.png");
     background-size: cover;
     border-radius: 1rem;
     z-index: -1;
     position: absolute;
     top: 10%;
     left: 15%;
-    /*animation: appear 1700ms;*/ }
+    animation: appear 1700ms; }
   header .dialogue {
     height: 35%;
     margin: 16rem auto auto auto;
     border-radius: 1rem;
     position: relative;
-    /*animation : description_appear 1700ms;*/ }
+    animation: description_appear 1700ms; }
     header .dialogue .name_contact {
       display: flex;
       justify-content: space-between; }
