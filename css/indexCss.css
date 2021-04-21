@@ -8,49 +8,97 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes logo_move {
+  0% {
+    transform: rotate(0deg) translate(0, 0); }
+  25% {
+    transform: rotate(30deg) translate(0.5rem, 0.5rem); }
+  50% {
+    transform: rotate(0deg) translate(0, 0); }
+  75% {
+    transform: rotate(-30deg) translate(-0.5rem, 0.5rem); }
+  100% {
+    transform: rotate(0deg) translate(0, 0); } }
 body {
   width: 60%;
-  margin: 3rem auto;
+  margin: 5rem auto;
   padding: 3rem;
   font-family: Georgia, 'Open Sans', 'sans-serif';
   color: white;
   border: 2px solid rgba(121, 125, 127, 0.5);
   border-radius: 1rem;
-  background-image: url("images/background.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover; }
 
 /*HEADER--------------------------------------------------*/
 header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 3rem; }
-  header .photo_name {
-    text-align: center;
-    position: relative;
+  margin-bottom: 3rem;
+  /*#triangle{
+  	width : 0;
+  	height : 0;
+  	display : inline-block;
+  	border-top : 50px solid $color_primary;
+  	border-left : 50px solid transparent;
+  	position : absolute;
+  	left : -50px;
+  }*/ }
+  header .imageProfil {
+    width: 50rem;
+    height: 50%;
+    background-image: url("../img/profilFull.png");
+    background-size: cover;
+    border-radius: 1rem;
+    z-index: -1;
+    position: absolute;
+    top: 10%;
+    left: 15%;
     animation: appear 1700ms; }
-    header .photo_name h1 {
-      color: #F888A3; }
-  header img {
-    width: 10rem;
-    height: auto;
-    border-radius: 1rem; }
-  header .description {
-    width: 70%;
+  header .dialogue {
     height: 35%;
-    padding: 1rem;
-    background-color: rgba(248, 136, 136, 0.5);
+    margin: 16rem auto auto auto;
     border-radius: 1rem;
     position: relative;
     animation: description_appear 1700ms; }
-    header .description #triangle {
-      width: 0;
-      height: 0;
-      display: inline-block;
-      border-top: 50px solid rgba(248, 136, 136, 0.5);
-      border-left: 50px solid transparent;
-      position: absolute;
-      left: -50px; }
+    header .dialogue .name_contact {
+      display: flex;
+      justify-content: space-between; }
+      header .dialogue .name_contact .name {
+        width: 17rem;
+        max-height: 9rem;
+        margin-bottom: -3%;
+        text-align: center;
+        border: thick double #922b21;
+        border-radius: 0 1rem 1rem 0;
+        background-color: #500e08;
+        position: relative;
+        z-index: 1; }
+        header .dialogue .name_contact .name h1 {
+          margin: .5rem; }
+        header .dialogue .name_contact .name h2 {
+          font-size: 12px; }
+      header .dialogue .name_contact .contact {
+        text-align: right;
+        width: 50%; }
+        header .dialogue .name_contact .contact a {
+          text-decoration: none; }
+        header .dialogue .name_contact .contact i {
+          padding: .5rem;
+          margin: -1.2rem 1.5rem 0 0;
+          font-size: 40px;
+          color: #500e08;
+          background-color: #af726c;
+          border: 2px solid #922b21;
+          border-radius: 1rem; }
+          header .dialogue .name_contact .contact i:hover {
+            animation: logo_move 800ms linear infinite; }
+    header .dialogue .description {
+      padding: 1.5rem 1rem 1rem 1rem;
+      color: #500e08;
+      border: thick double #922b21;
+      border-radius: 1rem;
+      background-color: #af726c;
+      position: relative;
+      z-index: -1; }
 
 /*CORPS--------------------------------------------------*/
 section {
@@ -60,17 +108,12 @@ section {
   align-items: baseline; }
   section .aside {
     flex: 1;
-    font-size: 16px; }
+    font-size: 1rem; }
     section .aside h1 {
-      font-size: 16px; }
+      font-size: 1rem; }
     section .aside .block {
       margin-bottom: 2rem;
-      line-height: 22px; }
-      section .aside .block a {
-        text-decoration: none;
-        color: red; }
-        section .aside .block a:hover {
-          border-bottom: 2px solid red; }
+      line-height: 1.375rem; }
   section .bloc_pro {
     margin-left: 7rem;
     flex: 4; }
@@ -83,15 +126,15 @@ section {
     align-content: start; }
   section .date_categories {
     flex: 1;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 1rem 2rem 1rem 0;
     text-align: right; }
     section .date_categories h2 {
-      font-size: 16px;
+      font-size: 1rem;
       margin-left: -5rem; }
     section .date_categories h3 {
-      font-size: 12px;
-      margin-top: -12px; }
+      font-size: .75rem;
+      margin-top: -.75rem; }
   section .acquis {
     flex: 4; }
   section ul {
@@ -102,35 +145,47 @@ section {
     section ul li {
       margin: .5rem .5rem;
       padding: .5rem 1rem;
-      background-color: black;
+      background-color: #500e08;
       border-radius: 1rem; }
 
 /*AUTRES--------------------------------------------------*/
 .fas {
-  color: red; }
+  color: #af726c; }
 
 /*SCREEN SIZE--------------------------------------------------*/
-@media (max-width: 1200px) {
+@media all and (max-width: 1200px) {
   body {
     width: 80%; }
 
   header {
-    flex-direction: column;
     margin-bottom: 3rem; }
-    header .description {
-      width: 95%; }
-      header .description #triangle {
-        border-top: 50px solid transparent; }
+    header .imageProfil {
+      height: 35rem;
+      top: 5%; }
+    header .dialogue {
+      margin-top: 18rem;
+      width: 95%;
+      /*#triangle{
+      	border-top : 50px solid transparent;
+      }*/ }
+      header .dialogue .description p {
+        font-size: 1.3rem; }
 
   section {
     display: block; }
     section .aside {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
     section .bloc_pro {
       margin-left: 0; }
-    section .date_categories h2 {
-      font-size: 16px;
-      margin-left: -2rem; }
+      section .bloc_pro .date_categories h2 {
+        margin-left: -2rem; }
 
   hr {
+    margin-right: 2rem;
+    margin-left: 2rem;
     max-height: 150px; } }
+@media all and (max-width: 710px) {
+  header .dialogue .name_contact .contact i {
+    margin-top: .7rem;
+    margin-bottom: .2rem; } }

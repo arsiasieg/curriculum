@@ -1,5 +1,8 @@
-$backColor : rgba(248, 136, 136, 0.5);
+$color_primary : rgb(80, 14, 8);
+$color_secondary:rgb(175, 114, 108);
+$border_color : rgb(146, 43, 33);
 $border : 1rem;
+
 
 @mixin flex {
 	display : flex;
@@ -27,59 +30,134 @@ $border : 1rem;
 }
 
 
+@keyframes logo_move{
+	0%{
+		transform: rotate(0deg) translate(0, 0);
+
+	}
+	25%{
+		transform: rotate(30deg) translate(.5rem, .5rem);
+	}
+	50%{
+		transform: rotate(0deg) translate(0, 0);
+	}
+	75%{
+		transform: rotate(-30deg) translate(-.5rem, .5rem);
+	}
+	100%{
+		transform: rotate(0deg) translate(0, 0);
+	}
+}
+
+
 body{
 	width : 60%;
-	margin: 3rem auto;
+	margin: 5rem auto;
 	padding : 3rem;
 	font-family: Georgia, 'Open Sans', 'sans-serif';
 	color : white;
 	border : 2px solid rgba(121, 125, 127, .5);
 	border-radius : $border;
-	background-image : url("images/background.jpg");
+	background-image : url("../img/background.jpg");
 	background-size : cover;
 }
 
 /*HEADER--------------------------------------------------*/
 header{
-	@include flex;
 	margin-bottom : 3rem;
 	
-	.photo_name{
-		text-align : center;
-		position : relative;
-		animation: appear 1700ms;
 
-		h1{
-			color : #F888A3;
-		}
-	}
-
-	img{
-		width : 10rem;
-		height : auto;
+	.imageProfil{
+		width : 50rem;
+		height : 50%;
+		background-image : url("../img/profilFull.png");
+		background-size : cover;
 		border-radius : $border;
-		
+		z-index : -1;
+		position : absolute;
+		top:10%;
+		left :15%;
+		animation: appear 1700ms;
 	}
 
-	.description{
-		width : 70%;
+	.dialogue{
 		height : 35%;
-		padding : 1rem;
-		background-color : $backColor;
+		margin : 16rem auto auto auto;
 		border-radius : $border;
 		position : relative;
 		animation : description_appear 1700ms;
 
-		#triangle{
+		.name_contact{
+			display:flex;
+			justify-content : space-between;
+
+			.name{
+				width : 17rem;
+				max-height: 9rem;
+				margin-bottom : -3%;
+				text-align : center;
+				border : thick double $border_color;
+				border-radius : 0 1rem 1rem 0;
+				background-color : $color_primary;
+				position : relative;
+				z-index : 1;
+
+				h1{
+					margin : .5rem;
+				}
+
+				h2{
+					font-size : 12px;
+				}
+			}
+
+			.contact{
+				text-align : right;
+				width : 50%;
+
+				a{
+					text-decoration: none;
+					
+				}
+				i{
+					padding : .5rem;
+					margin : -1.2rem 1.5rem 0 0;
+					font-size : 40px;
+					color : $color_primary;
+					background-color : $color_secondary;
+					border : 2px solid $border_color;
+					border-radius : $border;
+					
+					&:hover{
+						animation : logo_move 800ms linear infinite;
+					}
+				}
+			}
+		}
+
+		
+
+		.description{
+			padding : 1.5rem 1rem 1rem 1rem;
+			color : $color_primary;
+			border : thick double $border_color;
+			border-radius : $border;
+			background-color : $color_secondary;
+			position : relative;
+			z-index : -1;
+		}
+	}
+
+
+		/*#triangle{
 			width : 0;
 			height : 0;
 			display : inline-block;
-			border-top : 50px solid $backColor;
+			border-top : 50px solid $color_primary;
 			border-left : 50px solid transparent;
 			position : absolute;
 			left : -50px;
-		}
-	}
+		}*/
 }
 
 /*CORPS--------------------------------------------------*/
@@ -89,23 +167,15 @@ section{
 
 	.aside{
 		flex : 1;
-		font-size: 16px;
+		font-size: 1rem;
 
 		h1{
-			font-size: 16px;
+			font-size: 1rem;
 		}
 
 		.block{
 			margin-bottom : 2rem;
-			line-height: 22px;
-
-			a{
-				text-decoration: none;
-				color : red;
-				&:hover{
-					border-bottom : 2px solid red;
-				}
-			}
+			line-height: 1.375rem;
 		}
 	}
 
@@ -128,17 +198,17 @@ section{
 
 	.date_categories{
 			flex:1;
-			font-size: 14px;
+			font-size: 0.875rem;
 			margin : 1rem 2rem 1rem 0;
 			text-align : right;
 			h2{
-				font-size: 16px;
+				font-size: 1rem;
 				margin-left : -5rem;
 			}
 
 			h3{
-				font-size : 12px;
-				margin-top : -12px;
+				font-size : .75rem;
+				margin-top : -.75rem;
 			}
 	}
 
@@ -155,7 +225,7 @@ section{
 		li{
 			margin : .5rem .5rem;
 			padding : .5rem 1rem;
-			background-color : black;
+			background-color : $color_primary;
 			border-radius : $border;
 		}
 	}
@@ -164,25 +234,37 @@ section{
 
 /*AUTRES--------------------------------------------------*/
 .fas{
-	color : red;
+	color : $color_secondary;
 }
 
 
 /*SCREEN SIZE--------------------------------------------------*/
-@media (max-width: 1200px){
+@media all and (max-width: 1200px){
 
 	body{
 		width : 80%;
 	}
 
+
 	header{
-		flex-direction: column;
 		margin-bottom : 3rem;
 
-		.description{
+		.imageProfil{
+			height : 35rem;
+			top : 5%;
+		}
+
+		.dialogue{
+			margin-top : 18rem;
 			width : 95%;
-			#triangle{
+			/*#triangle{
 				border-top : 50px solid transparent;
+			}*/
+
+			.description{
+				p{
+					font-size: 1.3rem;
+				}
 			}
 		}
 	}
@@ -192,21 +274,45 @@ section{
 
 		.aside{
 			display : flex;
+			justify-content : center;
 		}
+
+
 
 		.bloc_pro{
 			margin-left : 0;
-		}
-
-		.date_categories{
-			h2{
-				font-size: 16px;
-				margin-left : -2rem;
+			.date_categories{
+				h2{
+					margin-left : -2rem;
+				}
 			}
+			
 		}
+	
 	}
 	
 	hr{
+		margin-right : 2rem;
+		margin-left : 2rem;
 		max-height: 150px;
 	}
 }
+
+@media all and (max-width: 710px){
+	header{
+		.dialogue{
+			.name_contact{
+				.contact{
+					i{
+						margin-top : .7rem;
+						margin-bottom : .2rem;
+					}
+				}
+			}
+		}
+			
+	}
+
+	
+}
+
