@@ -43,12 +43,11 @@ body{
 header{
 	@include flex;
 	margin-bottom : 3rem;
-
+	
 	.photo_name{
 		text-align : center;
 		position : relative;
 		animation: appear 1700ms;
-
 
 		h1{
 			color : #F888A3;
