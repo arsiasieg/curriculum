@@ -1,4 +1,4 @@
-# curriculum
+# Curriculum Vitae
 Pour voir mon CV , c'est par [ICI](https://arsiasieg.github.io/curriculum/index.HTML)
 
 J'ai réalisé ce CV grâce : <br>
