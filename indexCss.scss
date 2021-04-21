@@ -1,0 +1,213 @@
+$backColor : rgba(248, 136, 136, 0.5);
+$border : 1rem;
+
+@mixin flex {
+	display : flex;
+	justify-content : space-around;
+	align-items : center;
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+@keyframes description_appear{
+	0%, 20%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+body{
+	width : 60%;
+	margin: 3rem auto;
+	padding : 3rem;
+	font-family: Georgia, 'Open Sans', 'sans-serif';
+	color : white;
+	border : 2px solid rgba(121, 125, 127, .5);
+	border-radius : $border;
+	background-image : url("images/background.jpg");
+	background-size : cover;
+}
+
+/*HEADER--------------------------------------------------*/
+header{
+	@include flex;
+	margin-bottom : 3rem;
+
+	.photo_name{
+		text-align : center;
+		position : relative;
+		animation: appear 1700ms;
+
+
+		h1{
+			color : #F888A3;
+		}
+	}
+
+	img{
+		width : 10rem;
+		height : auto;
+		border-radius : $border;
+		
+	}
+
+	.description{
+		width : 70%;
+		height : 35%;
+		padding : 1rem;
+		background-color : $backColor;
+		border-radius : $border;
+		position : relative;
+		animation : description_appear 1700ms;
+
+		#triangle{
+			width : 0;
+			height : 0;
+			display : inline-block;
+			border-top : 50px solid $backColor;
+			border-left : 50px solid transparent;
+			position : absolute;
+			left : -50px;
+		}
+	}
+}
+
+/*CORPS--------------------------------------------------*/
+section{
+	@include flex;
+	align-items : baseline;
+
+	.aside{
+		flex : 1;
+		font-size: 16px;
+
+		h1{
+			font-size: 16px;
+		}
+
+		.block{
+			margin-bottom : 2rem;
+			line-height: 22px;
+
+			a{
+				text-decoration: none;
+				color : red;
+				&:hover{
+					border-bottom : 2px solid red;
+				}
+			}
+		}
+	}
+
+	.bloc_pro{
+		margin-left : 7rem;
+		flex : 4;
+
+		.section{
+			margin-bottom : 4rem;
+
+		}
+	}
+
+	.projet{
+		display : flex;
+		justify-content : space-between;
+		align-items : baseline;
+		align-content : start;
+	}
+
+	.date_categories{
+			flex:1;
+			font-size: 14px;
+			margin : 1rem 2rem 1rem 0;
+			text-align : right;
+			h2{
+				font-size: 16px;
+				margin-left : -5rem;
+			}
+
+			h3{
+				font-size : 12px;
+				margin-top : -12px;
+			}
+	}
+
+	.acquis{
+		flex :4;
+	}
+
+	ul {
+		padding :0;
+		display : flex;
+		flex-wrap : wrap;
+		list-style-type: none;
+		
+		li{
+			margin : .5rem .5rem;
+			padding : .5rem 1rem;
+			background-color : black;
+			border-radius : $border;
+		}
+	}
+}
+
+
+/*AUTRES--------------------------------------------------*/
+.fas{
+	color : red;
+}
+
+
+/*SCREEN SIZE--------------------------------------------------*/
+@media (max-width: 1200px){
+
+	body{
+		width : 80%;
+	}
+
+	header{
+		flex-direction: column;
+		margin-bottom : 3rem;
+
+		.description{
+			width : 95%;
+			#triangle{
+				border-top : 50px solid transparent;
+			}
+		}
+	}
+
+	section{
+		display : block;
+
+		.aside{
+			display : flex;
+		}
+
+		.bloc_pro{
+			margin-left : 0;
+		}
+
+		.date_categories{
+			h2{
+				font-size: 16px;
+				margin-left : -2rem;
+			}
+		}
+	}
+	
+	hr{
+		max-height: 150px;
+	}
+}
