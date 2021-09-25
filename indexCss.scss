@@ -51,15 +51,14 @@ $border : 1rem;
 
 
 body{
-	width : 60%;
-	margin: 5rem auto;
-	padding : 3rem;
+	width : 90%;
+	margin: 2rem auto;
 	font-family: Georgia, 'Open Sans', 'sans-serif';
 	color : white;
 	border : 2px solid rgba(121, 125, 127, .5);
 	border-radius : $border;
 	background-image : url("../img/background.jpg");
-	background-size : cover;
+	background-attachment: fixed;
 }
 
 /*HEADER--------------------------------------------------*/
@@ -68,39 +67,48 @@ header{
 	
 
 	.imageProfil{
-		width : 50rem;
-		height : 50%;
-		background-image : url("../img/profilFull.png");
-		background-size : cover;
-		border-radius : $border;
-		z-index : -1;
-		position : absolute;
-		top:10%;
-		left :15%;
+		width : 90%;
+		height : 40rem;
+		background-image: url("../img/profilFull.png");
+		background-size: 150%;
+		background-position-x: center;
+		position: absolute;
+		top : 2rem;
 		animation: appear 1700ms;
 	}
 
+	.contact{
+		i{
+			padding : .5rem;
+			margin :.5rem;
+			font-size : 40px;
+			color : $color_primary;
+			background-color : $color_secondary;
+			border : 2px solid $border_color;
+			border-radius : $border;
+			position: absolute;
+
+			
+			
+			&:hover{
+				animation : logo_move 800ms linear infinite;
+			}
+		}
+	}
+
 	.dialogue{
-		height : 35%;
-		margin : 16rem auto auto auto;
-		border-radius : $border;
+		margin : 16rem 0 auto;
 		position : relative;
 		animation : description_appear 1700ms;
 
 		.name_contact{
-			display:flex;
-			justify-content : space-between;
 
 			.name{
-				width : 17rem;
-				max-height: 9rem;
-				margin-bottom : -3%;
+				width : 98%;
 				text-align : center;
 				border : thick double $border_color;
-				border-radius : 0 1rem 1rem 0;
+				border-radius : 1rem;
 				background-color : $color_primary;
-				position : relative;
-				z-index : 1;
 
 				h1{
 					margin : .5rem;
@@ -108,29 +116,6 @@ header{
 
 				h2{
 					font-size : 12px;
-				}
-			}
-
-			.contact{
-				text-align : right;
-				width : 50%;
-
-				a{
-					text-decoration: none;
-					
-				}
-				i{
-					padding : .5rem;
-					margin : -1.2rem 1.5rem 0 0;
-					font-size : 40px;
-					color : $color_primary;
-					background-color : $color_secondary;
-					border : 2px solid $border_color;
-					border-radius : $border;
-					
-					&:hover{
-						animation : logo_move 800ms linear infinite;
-					}
 				}
 			}
 		}
@@ -144,7 +129,6 @@ header{
 			z-index : -1;
 		}
 	}
-
 
 		/*#triangle{
 			width : 0;
@@ -236,80 +220,4 @@ section{
 
 
 /*SCREEN SIZE--------------------------------------------------*/
-@media all and (max-width: 1200px){
-
-	body{
-		width : 80%;
-	}
-
-
-	header{
-		margin-bottom : 3rem;
-
-		.imageProfil{
-			height : 35rem;
-			top : 5%;
-		}
-
-		.dialogue{
-			margin-top : 18rem;
-			width : 95%;
-			/*#triangle{
-				border-top : 50px solid transparent;
-			}*/
-
-			.description{
-				p{
-					font-size: 1.3rem;
-				}
-			}
-		}
-	}
-
-	section{
-		display : block;
-
-		.aside{
-			display : flex;
-			justify-content : center;
-		}
-
-
-
-		.bloc_pro{
-			margin-left : 0;
-			.date_categories{
-				h2{
-					margin-left : -2rem;
-				}
-			}
-			
-		}
-	
-	}
-	
-	hr{
-		margin-right : 2rem;
-		margin-left : 2rem;
-		max-height: 150px;
-	}
-}
-
-@media all and (max-width: 710px){
-	header{
-		.dialogue{
-			.name_contact{
-				.contact{
-					i{
-						margin-top : .7rem;
-						margin-bottom : .2rem;
-					}
-				}
-			}
-		}
-			
-	}
-
-	
-}
 
