@@ -83,7 +83,7 @@
 body {
   width: 90%;
   margin: 2rem auto;
-  font-size: 12px;
+  font-size: 1.3vh;
   font-family: Georgia, 'Open Sans', 'sans-serif';
   color: white;
   border: 2px solid rgba(121, 125, 127, 0.5);
@@ -94,7 +94,7 @@ body {
 }
 
 /*HEADER--------------------------------------------------*/
-header .imageProfil {
+.imageProfil {
   width: 90%;
   height: 40rem;
   background-image: url("../img/profilFull.png");
@@ -106,7 +106,7 @@ header .imageProfil {
           animation: appear 1700ms;
 }
 
-header .contact {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,33 +116,33 @@ header .contact {
           flex-direction: column;
   text-align: center;
   position: absolute;
-  top: 5rem;
-  right: 3rem;
+  top: 4vh;
+  right: 3vh;
 }
 
-header .contact i {
+.contact i {
   padding: .5rem;
   margin: 1rem;
-  font-size: 5rem;
+  font-size: 4vh;
   color: #500e08;
   background-color: #af726c;
   border: 2px solid #922b21;
   border-radius: 1rem;
 }
 
-header .contact i:hover {
+.contact i:hover {
   -webkit-animation: logo_move 800ms linear infinite;
           animation: logo_move 800ms linear infinite;
 }
 
-header .dialogue {
+.dialogue {
   margin: 30rem 0 auto;
   position: relative;
   -webkit-animation: description_appear 1700ms;
           animation: description_appear 1700ms;
 }
 
-header .dialogue .name_contact .name {
+.name {
   width: 98%;
   padding: .5rem;
   text-align: center;
@@ -151,15 +151,15 @@ header .dialogue .name_contact .name {
   background-color: #500e08;
 }
 
-header .dialogue .name_contact .name h1 {
+.name h1 {
   margin: .5rem;
 }
 
-header .dialogue .name_contact .name h2 {
-  font-size: 11px;
+.name h2 {
+  font-size: 1.3vh;
 }
 
-header .dialogue .description {
+.description {
   padding: 1.5rem;
   text-align: justify;
   color: #500e08;
@@ -167,10 +167,11 @@ header .dialogue .description {
   border-radius: 1rem;
   background-color: #af726c;
   z-index: -1;
+  font-size: 1.6vh;
 }
 
 /*CORPS--------------------------------------------------*/
-.section .language-lobby {
+.language-lobby {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,50 +180,59 @@ header .dialogue .description {
           justify-content: center;
 }
 
-.section .language-lobby .block {
+.block {
   width: 100%;
   margin: 2rem;
 }
 
-.section .language-lobby .block h1 {
-  font-size: 2.5rem;
+.block h1 {
+  font-size: 2vh;
 }
 
-.section .language-lobby .block .paragraphe {
-  font-size: 2rem;
+.block p {
+  font-size: 1.6vh;
 }
 
-.section .language-lobby .align-right {
+.align-right {
   text-align: right;
 }
 
-.section .bloc_pro {
+.bloc_pro, .bloc_formation {
   margin: 1rem;
 }
 
-.section .bloc_pro .container h1 {
-  font-size: 16px;
+.container {
+  margin-top: 2vh;
 }
 
-.section .bloc_pro .container .projet {
+.container h1 {
+  font-size: 2vh;
+}
+
+hr {
+  width: 80%;
+}
+
+.projet {
   margin: 3rem 0;
 }
 
-.section .bloc_pro .container .projet h2 {
+.projet h2 {
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 0;
 }
 
-.section .bloc_pro .container .projet .title {
+.title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-size: 2rem;
+  font-size: 1.5vh;
 }
 
-.section ul {
+ul {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,7 +242,7 @@ header .dialogue .description {
   list-style-type: none;
 }
 
-.section ul li {
+ul li {
   margin: .5rem .5rem;
   padding: .5rem 1rem;
   background-color: #500e08;
@@ -243,6 +253,4 @@ header .dialogue .description {
 .fas {
   color: #af726c;
 }
-
-/*SCREEN SIZE--------------------------------------------------*/
 /*# sourceMappingURL=indexCss.css.map */

@@ -46,7 +46,7 @@ $border : 1rem;
 body{
 	width : 90%;
 	margin: 2rem auto;
-	font-size: 12px;
+	font-size: 1.3vh;
 	font-family: Georgia, 'Open Sans', 'sans-serif';
 	color : white;
 	border : 2px solid rgba(121, 125, 127, .5);
@@ -57,140 +57,140 @@ body{
 }
 
 /*HEADER--------------------------------------------------*/
-header{
+.imageProfil{
+	width : 90%;
+	height : 40rem;
+	background-image: url("../img/profilFull.png");
+	background-size: 150%;
+	background-position-x: center;
+	position: absolute;
+	top : 2rem;
+	animation: appear 1700ms;
+}
 
-	.imageProfil{
-		width : 90%;
-		height : 40rem;
-		background-image: url("../img/profilFull.png");
-		background-size: 150%;
-		background-position-x: center;
-		position: absolute;
-		top : 2rem;
-		animation: appear 1700ms;
-	}
+.contact{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: absolute;
+	top: 4vh;
+	right: 3vh;
 
-	.contact{
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		position: absolute;
-		top: 5rem;
-		right: 3rem;
-
-		i{
-			padding : .5rem;
-			margin : 1rem;
-			font-size : 5rem;
-			color : $color_primary;
-			background-color : $color_secondary;
-			border : 2px solid $border_color;
-			border-radius : $border;
-			
-			&:hover{
-				animation : logo_move 800ms linear infinite;
-			}
-		}
-	}
-
-	.dialogue{
-		margin : 30rem 0 auto;
-		position : relative;
-		animation : description_appear 1700ms;
-
-		.name_contact{
-			.name{
-				width : 98%;
-				padding: .5rem;
-				text-align : center;
-				border : thick double $border_color;
-				border-radius : 1rem;
-				background-color : $color_primary;
-
-				h1{
-					margin : .5rem;
-				}
-
-				h2{
-					font-size: 11px;
-				}
-			}
-		}
-
-		.description{
-			padding : 1.5rem;
-			text-align: justify;
-			color : $color_primary;
-			border : thick double $border_color;
-			border-radius : $border;
-			background-color : $color_secondary;
-			z-index : -1;
+	i{
+		padding : .5rem;
+		margin : 1rem;
+		font-size : 4vh;
+		color : $color_primary;
+		background-color : $color_secondary;
+		border : 2px solid $border_color;
+		border-radius : $border;
+		
+		&:hover{
+			animation : logo_move 800ms linear infinite;
 		}
 	}
 }
 
+.dialogue{
+	margin : 30rem 0 auto;
+	position : relative;
+	animation : description_appear 1700ms;
+}
+
+.name{
+	width : 98%;
+	padding: .5rem;
+	text-align : center;
+	border : thick double $border_color;
+	border-radius : 1rem;
+	background-color : $color_primary;
+
+	h1{
+		margin : .5rem;
+	}
+
+	h2{
+		font-size: 1.3vh;
+	}
+}
+
+.description{
+	padding : 1.5rem;
+	text-align: justify;
+	color : $color_primary;
+	border : thick double $border_color;
+	border-radius : $border;
+	background-color : $color_secondary;
+	z-index : -1;
+	font-size: 1.6vh;
+}
+
 /*CORPS--------------------------------------------------*/
-.section{
-	.language-lobby{
-		display: flex;
-		justify-content: center;
 
-		.block{
-			width: 100%;
-			margin: 2rem;
+.language-lobby{
+	display: flex;
+	justify-content: center;
+}
+.block{
+	width: 100%;
+	margin: 2rem;
 
-			h1{
-				font-size: 2.5rem;
-			}
-
-			.paragraphe{
-				font-size: 2rem;
-			}
-		}
-
-		.align-right{
-			text-align: right;
-		}
+	h1{
+		font-size: 2vh;
 	}
 
-	.bloc_pro{
-		margin : 1rem;
-
-		.container{
-			h1{
-				font-size: 16px;
-			}
-
-			.projet{
-				margin: 3rem 0;
-				h2{
-					text-align: center;
-					text-decoration: underline;
-				}
-
-				.title{
-					display: flex;
-					justify-content: space-around;
-					font-size: 2rem;
-				}
-			}
-		}
+	p{
+		font-size: 1.6vh;
 	}
+}
+
+.align-right{
+	text-align: right;
+}
+
+.bloc_pro, .bloc_formation{
+	margin : 1rem;
+}
+.container{
+	margin-top : 2vh;
+	
+	h1{
+		font-size: 2vh;
+	}
+}
+
+hr{
+	width: 80%;
+}
+
+.projet{
+	margin: 3rem 0;
+
+	h2{
+		text-align: center;
+		text-decoration: underline;
+		margin-bottom: 0;
+	}
+}
+
+.title{
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5vh;
+}
 
 
-
-	ul {
-		padding :0;
-		display : flex;
-		flex-wrap : wrap;
-		list-style-type: none;
-		
-		li{
-			margin : .5rem .5rem;
-			padding : .5rem 1rem;
-			background-color : $color_primary;
-			border-radius : $border;
-		}
+ul {
+	padding :0;
+	display : flex;
+	flex-wrap : wrap;
+	list-style-type: none;
+	
+	li{
+		margin : .5rem .5rem;
+		padding : .5rem 1rem;
+		background-color : $color_primary;
+		border-radius : $border;
 	}
 }
 
@@ -199,7 +199,4 @@ header{
 .fas{
 	color : $color_secondary;
 }
-
-
-/*SCREEN SIZE--------------------------------------------------*/
 
