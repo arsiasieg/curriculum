@@ -1,8 +1,11 @@
 # Curriculum Vitae
-Pour voir mon CV , c'est par [ICI](https://arsiasieg.github.io/curriculum/index.HTML)
+To view my CV, it's [HERE](https://arsiasieg.github.io/curriculum/index.HTML)
 
-J'ai réalisé ce CV grâce à : <br>
-Mon clavier adoré ⌨️<br>
+I make this site with : <br>
+My dear keyboard⌨️<br>
 [Sublime text 3](https://www.sublimetext.com/)<br>
 [SASS](https://sass-lang.com/)<br>
 [Font Awesome](https://fontawesome.com/)<br>
+
+# Update 30 Nov 2021
+With my new skill, i want to update my CV so wait & see !
